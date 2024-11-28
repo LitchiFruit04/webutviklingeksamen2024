@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettbutikk</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/361843f29d.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header>
+        <form action="#" id="søkefelt">
+            <label for="search">
+                <input type="search" name="search" id="search" placeholder="Søk her" aria-label="Søk">
+            </label>
+            <button id="søk" aria-label="Søk">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html">Produkt</a></li>
+                <li><a href="index.html" id="logo">Logo</a></li>
+                <li><a href="#popular-categories">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-label="Brukerprofil"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="index.html" aria-label="Favoritter"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <h1>Kasse</h1>
+        <section>
+            <h2>1. Shoppingbagen din</h2>
+            <article itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn</h3>
+                <p>Farge: <span itemprop="color">Beige</span></p>
+            </article>
+        </section>
+        <section>
+            <article itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn</h3>
+                <p>Farge: <span itemprop="color">Beige</span></p>
+            </article>
+        </section>
+
+        <section class="opplysninger">
+            <h2>2. Dine opplysninger</h2>
+            <form>
+                <section>
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" id="fornavn" name="fornavn" required>
+                </section>
+                <section>
+                    <label for="etternavn">Etternavn:</label>
+                    <input type="text" id="etternavn" name="etternavn" required>
+                </section>
+                <section>
+                    <label for="adresse">Gateadresse:</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </section>
+                <section>
+                    <label for="postnummer">Postnummer:</label>
+                    <input type="text" id="postnummer" name="postnummer" pattern="\d{4}" title="Postnummer må være 4 siffer" required>
+                </section>
+                <section>
+                    <label for="poststed">Poststed:</label>
+                    <input type="text" id="poststed" name="poststed" required>
+                </section>
+                <section>
+                    <label for="epost">E-post:</label>
+                    <input type="email" id="epost" name="epost" required placeholder="@hiof.no">
+                </section>
+                <section>
+                    <label for="telefon">Telefonnummer:</label>
+                    <input type="tel" id="telefon" name="telefon" pattern="\d{8}" title="Telefonnummer må være 8 siffer" required>
+                </section>
+                <button type="submit">Lagre</button>
+                <button type="reset">Avbryt</button>
+            </form>
+        </section>
+        <section class="levering">
+            <h2>3. Levering</h2>
+            <form>
+                <fieldset>
+                    <legend>Velg leveringsmetode</legend>
+                    <label>
+                        <input type="radio" name="levering" value="ekspress-hjem" required>
+                        Ekspresslevering hjem
+                        <span class="levering-info"> - Leveringstid: 1-2 dager, Pris: 99 kr</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="levering" value="ekspress-utlevering" required>
+                        Ekspress pakke til utleveringssted
+                        <span class="levering-info"> - Leveringstid: 1-2 dager, Pris: 79 kr</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="levering" value="standard-hjem" required>
+                        Standard hjemlevering
+                        <span class="levering-info"> - Leveringstid: 3-5 dager, Pris: 49 kr</span>
+                    </label>
+                </fieldset>
+            </form>
+        </section>
+        <section class="betaling">
+            <h2>4. Betaling</h2>
+            <form>
+                <section>
+                    <label for="kortnummer">Kortnummer:</label>
+                    <input type="text" id="kortnummer" name="kortnummer" pattern="\d{16}" title="Kortnummer må være 16 siffer" required>
+                </section>
+                <section>
+                    <label for="utløpsdato">Utløpsdato:</label>
+                    <input type="text" id="utløpsdato" name="utløpsdato" pattern="\d{2}/\d{2}" title="Utløpsdato må være i formatet MM/ÅÅ" required>
+                </section>
+                <section>
+                    <label for="cvc">CVC/CVV:</label>
+                    <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required>
+                </section>
+                <p>Å betale inkl. mva.: 1 199 kr</p>
+                <button type="submit">Fullfør</button>
+                <p>Du bekrefter at opplysningene er korrekte. Leverandøren forbeholder seg retten til å heve avtalen ved uriktige opplysninger.</p>
+                <section>
+                    <label>
+                        <input type="checkbox" name="vilkår" required>
+                        Jeg bekrefter vilkårene.
+                    </label>
+                </section>
+                <section>
+                    <label>
+                        <input type="checkbox" name="nyhetsbrev">
+                        Jeg ønsker å motta nyhetsbrev.
+                    </label>
+                </section>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <h2 id="logo-1">Logo</h2>
+        <p>Beste produkt og kvalitet.</p>
+        <nav>
+            <h3>Kontakt</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> <b>Adresse:</b> B R A Veien 4, 1757 Halden</li>
+                <li><i class="fa-solid fa-phone"></i> <b>Telefon:</b> 69 60 80 00</li>
+                <li><i class="fa-solid fa-envelope"></i> <b>E-post:</b> halden@hiof.no</li>
+                <li><i class="fa-solid fa-clock"></i> <b>Åpningstider:</b> Stenger 15:00</li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="product.html">Produkt</a></li>
+                <li><a href="index.html">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+                <li><a href="#">WCAG</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Sosiale medier</h3>
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
