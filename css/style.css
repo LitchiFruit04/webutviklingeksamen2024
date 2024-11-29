@@ -26,20 +26,22 @@ nav {
 
 nav ul {
   list-style: none;
-  padding: 0;
-  display: left;
-  gap: 1.5rem;
+  display: flex; /* Gjør det til en fleksibel container */
+  flex-direction: column; /* Vertikal stabling */
+  gap: 2rem; /* Øker luft mellom listeelementene */
 }
 
 nav ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  margin-bottom: 2rem; /* Luft mellom listeelementene */
+
 }
 
 
 /* Hero Section */
 #hero {
-  background-color: #f4f4f4;
+  background-color: #989898;
   text-align: right;
   padding: 2rem;
 }
@@ -54,8 +56,25 @@ img  {
 
 }
 
+.products a {
+  text-decoration: none; /* Fjerner linjen under lenken */
+  color: inherit; /* Beholder fargen fra omgivelsene */
+}
+
+.products a:hover {
+  text-decoration: none; /* Sørger for at linjen ikke dukker opp ved hover */
+}
+
+.product-link {
+  text-decoration: none; /* Ingen linje under lenken */
+  color: inherit; /* Arver tekstfargen fra foreldrelementet */
+  display: block; /* Sørger for at lenken dekker hele artikkelen */
+}
+
+
+
 .resize-img {
-  width: 40%; /* Change size as needed */
+  width: 150px; /* Change size as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -64,19 +83,23 @@ ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
 }
+
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
-ul.breadcrumb li+li:before {
+
+ul.breadcrumb li + li:before {
   padding: 8px;
   color: black;
-  content: "/\00a0";
+  content: ">\00a0"; /* Endret separatoren til > */
 }
+
 ul.breadcrumb li a {
   color: #000000;
   text-decoration: none;
 }
+
 ul.breadcrumb li a:hover {
   color: #004581;
   text-decoration: underline;
@@ -84,8 +107,8 @@ ul.breadcrumb li a:hover {
 
 .button {
   border: none;
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -96,26 +119,27 @@ ul.breadcrumb li a:hover {
 }
 
 button[type="submit"] {
-  background-color: #000000; /* Blå farge */
-  color: #fff; /* Hvit tekst */
-  font-size: 16px; /* Tekststørrelse */
-  padding: 10px 20px; /* Innvendig padding */
-  border: none; /* Fjern kantlinjer */
-  cursor: pointer; /* Endre markør ved hover */
+  background-color: #000000; 
+  color: #fff; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer; 
 
 }
 
 button[type="reset"] {
-  background-color: #000000; /* Blå farge */
-  color: #fff; /* Hvit tekst */
-  font-size: 16px; /* Tekststørrelse */
-  padding: 10px 20px; /* Innvendig padding */
-  border: none; /* Fjern kantlinjer */
-  cursor: pointer; /* Endre markør ved hover */
+  background-color: #000000; 
+  color: #fff; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer; 
 
 }
 
 .btn-group button {
+  background-color: #ffffff;
   border: 1px solid rgb(0, 0, 0); 
   color: rgb(0, 0, 0);
   padding: 10px 24px; /* Some padding */
@@ -131,12 +155,106 @@ button[type="reset"] {
 }
 
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: none; 
 }
 
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #656565;
+.opplysninger {
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.opplysninger h2 {
+  margin-bottom: 1.5rem;
+}
+
+.opplysninger form section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem; 
+}
+
+.opplysninger form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem; 
+}
+
+.opplysninger form input {
+  width: 100%; /* Feltene tar hele bredden */
+  padding: 10px; /* Ekstra padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Runde hjørner */
+  box-sizing: border-box; /* Sikrer at padding ikke øker feltbredden */
+}
+
+.opplysninger form button {
+  width: calc(50% - 10px); /* To knapper side om side */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  margin: 5px 5px 0 0; /* Litt mellomrom mellom knappene */
+}
+
+.opplysninger form button[type="reset"] {
+  background-color: #ccc; 
+}
+
+.opplysninger form button:hover {
+  opacity: 0.9; /* Effekt ved hover */
+}
+
+.betaling {
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.betaling h2 {
+  margin-bottom: 1.5rem;
+}
+
+.betaling form section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem; /* Mellomrom mellom feltene */
+}
+
+.betaling form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Litt mellomrom mellom label og input */
+}
+
+.betaling form input {
+  padding: 10px; /* Ekstra padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Runde hjørner */
+  box-sizing: border-box; /* Sikrer at padding ikke øker feltbredden */
+}
+
+.betaling form button {
+  width: calc(50% - 10px); /* To knapper side om side */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  margin: 5px 5px 0 0; /* Litt mellomrom mellom knappene */
+}
+
+.betaling form button[type="reset"] {
+  background-color: #ccc; /* Grå for avbryt */
+}
+
+.betaling form button:hover {
+  opacity: 0.9; /* Effekt ved hover */
 }
 
 
@@ -185,13 +303,20 @@ footer {
     width: 100%; height: 100%;
     display: block;
     margin-bottom: 20px;
+    border: #000000;
   }
 }
 
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  padding: 20px;
+  margin: 20px;
   text-align: center;
   background-color: #f1f1f1;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: rgb(0, 0, 0);
+  
+  
 }

@@ -20,9 +20,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="product.html">Produkt</a></li>
+                <li><a href="index.html#popular-products">Produkter</a></li>
                 <li><a href="index.html" id="logo"><b>Logo</b></a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
                 <li><a href="#footer">Kontakt oss</a></li>
             </ul>
         </nav>
@@ -39,20 +39,27 @@
         <section>
             <h2>1. Shoppingbagen din</h2>
             <article itemscope itemtype="https://schema.org/Product">
-                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
-                <h3 itemprop="name">Produktnavn</h3>
-                <p>Vi har de beste produktene online, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                <p>Farge: <span itemprop="color">Beige</span></p>
+                <a href="product.html" class="product-link">
+                    <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                    <h3 itemprop="name">Produktnavn</h3>
+                    <p>Vi har de beste produktene online, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                    <p>999 kr</p>
+                    <p>Farge: <span itemprop="color">Beige</span></p>
+                </a>
             </article>
         </section>
+        
         <section>
             <article itemscope itemtype="https://schema.org/Product">
-                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
-                <h3 itemprop="name">Produktnavn</h3>
-                <p>Vi har de beste produktene online, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                <p>Farge: <span itemprop="color">Beige</span></p>
+                <a href="product.html" class="product-link">
+                    <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                    <h3 itemprop="name">Produktnavn</h3>
+                    <p>Vi har de beste produktene online, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                    <p>999 kr</p>
+                    <p>Farge: <span itemprop="color">Beige</span></p>
+                </a>
             </article>
-        </section>
+        </section>        
 
         <section class="opplysninger">
             <h2>2. Dine opplysninger</h2>
@@ -102,12 +109,12 @@
                     <label>
                         <input type="radio" name="levering" value="ekspress-utlevering" required>
                         Ekspress pakke til utleveringssted
-                        <span class="levering-info"> - Leveringstid: 1-2 dager, Pris: 79 kr</span>
+                        <span class="levering-info"> - Leveringstid: 1-2 dager, Pris: 77 kr</span>
                     </label>
                     <label>
                         <input type="radio" name="levering" value="standard-hjem" required>
                         Standard hjemlevering
-                        <span class="levering-info"> - Leveringstid: 3-5 dager, Pris: 49 kr</span>
+                        <span class="levering-info"> - Leveringstid: 3-5 dager, Pris: 55 kr</span>
                     </label>
                 </fieldset>
             </form>
@@ -128,8 +135,8 @@
                     <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required>
                 </section>
                 <p>Å betale inkl. mva.: 1 199 kr</p>
-                <button type="submit">Fullfør</button>
-                <p>Du bekrefter at opplysningene er korrekte. Leverandøren forbeholder seg retten til å heve avtalen ved uriktige opplysninger.</p>
+                <button type="submit">Fullfør Kjøp</button>
+                <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
                 <section>
                     <label>
                         <input type="checkbox" name="vilkår" required>
@@ -169,10 +176,10 @@
         <nav>
             <h3>Sosiale medier</h3>
             <ul>
-                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/login" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="pinterest.com" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
             </ul>
         </nav>
     </footer>
